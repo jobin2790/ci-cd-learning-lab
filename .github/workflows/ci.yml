@@ -17,4 +17,4 @@ jobs:
         run: ls -la
 
       - name: Run test
-        run: echo "CI pipeline is working!"
+        run: exit 1
