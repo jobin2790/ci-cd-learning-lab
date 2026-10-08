@@ -18,3 +18,27 @@
 
 ### Result
 The CI workflow completed successfully with the automated testing step passing.
+
+## Day 5 — CI Failure Testing
+
+### Objective
+Verify that automated tests detect failures before code is merged.
+
+### What I practiced
+- Created a feature branch for failure testing.
+- Intentionally modified a test to trigger an assertion failure.
+- Verified that local tests detected the failure.
+- Confirmed that GitHub Actions failed the pull request check.
+- Fixed the failing test.
+- Verified that GitHub Actions passed after the fix.
+- Merged the pull request after successful validation.
+
+### Tools used
+- Git
+- GitHub
+- GitHub Actions
+- Python
+- Python unittest
+
+### Result
+Successfully demonstrated how CI detects failing tests and validates fixes before merging code.
