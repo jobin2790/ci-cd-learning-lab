@@ -67,3 +67,28 @@ Improve the reliability and security of the GitHub Actions CI workflow.
 
 ### Result
 Improved the CI workflow and successfully verified all three automated tests in GitHub Actions.
+
+
+## Day 7 — CI Matrix Testing
+
+### Objective
+Run automated tests across multiple Python versions using GitHub Actions matrix testing.
+
+### What I Practiced
+- Configured a Python version matrix in GitHub Actions.
+- Tested the application using Python 3.10, 3.11, and 3.12.
+- Used matrix variables to select the Python version dynamically.
+- Configured fail-fast: false so other jobs continue if one fails.
+- Verified all three matrix jobs completed successfully.
+- Reviewed GitHub Actions results and workflow warnings.
+
+### Tools Used
+- Git
+- GitHub
+- GitHub Actions
+- Python
+- Python unittest
+- YAML
+
+### Result
+Successfully implemented matrix testing and verified that all three Python-version jobs passed in GitHub Actions.
