@@ -30,5 +30,18 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Run automated tests
-        run: python -m unittest discover -s tests -v
+      - name: Run tests and generate report
+        shell: bash
+        run: |
+          mkdir -p test-reports
+          set -o pipefail
+          python -m unittest discover -s tests -v 2>&1 | tee "test-reports/test-report-python-${{ matrix.python-version }}.txt"
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report-python-${{ matrix.python-version }}
+          path: test-reports/test-report-python-${{ matrix.python-version }}.txt
+          if-no-files-found: warn
+          retention-days: 7
