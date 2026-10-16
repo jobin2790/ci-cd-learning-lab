@@ -42,3 +42,28 @@ Verify that automated tests detect failures before code is merged.
 
 ### Result
 Successfully demonstrated how CI detects failing tests and validates fixes before merging code.
+
+
+## Day 6 — Improve CI Workflow
+
+### Objective
+Improve the reliability and security of the GitHub Actions CI workflow.
+
+### What I Practiced
+- Configured read-only repository permissions.
+- Set up Python 3.12 in the CI environment.
+- Executed automated tests using Python unittest.
+- Configured CI to run on pushes and pull requests targeting main.
+- Verified all three tests passed locally.
+- Confirmed the GitHub Actions workflow completed successfully.
+
+### Tools Used
+- Git
+- GitHub
+- GitHub Actions
+- Python 3.12
+- Python unittest
+- YAML
+
+### Result
+Improved the CI workflow and successfully verified all three automated tests in GitHub Actions.
