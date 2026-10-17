@@ -1,0 +1,46 @@
+name: CI-CD Deployment Practice
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Run Python Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Run automated tests
+        run: python -m unittest discover -s tests -v
+
+  deploy:
+    name: Simulate Deployment
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Verify application
+        run: |
+          test -f cicd-day10/app.py
+          echo "Application file found"
+
+      - name: Simulate deployment
+        run: |
+          echo "All tests passed"
+          echo "Deployment simulation successful"
