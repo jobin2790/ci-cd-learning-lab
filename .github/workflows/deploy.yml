@@ -37,9 +37,9 @@ jobs:
 
       - name: Verify application
         run: |
-          test -f cicd-day10/app.py
-          echo "Application file found"
-
+          test -f tests/test_app.py
+          test -f requirements.txt
+          echo "Application project files found"
       - name: Simulate deployment
         run: |
           echo "All tests passed"
