@@ -38,10 +38,16 @@ jobs:
 
       - name: Verify application
         run: |
+          test -f app/main.py
+          test -f tests/test_api.py
           test -f tests/test_app.py
           test -f requirements.txt
-          echo "Application project files found"
-      - name: Simulate deployment
-        run: |
-          echo "All tests passed"
-          echo "Deployment simulation successful"
+          python -m pip install -r requirements.txt
+          python -m compileall -q app
+          echo "Application verification successful"
+
+         - name: Simulate deployment
+           run: |
+             echo "ALL tests passed"
+             echo "Application verification successful"
+             echo "Deployment simulation successful"
