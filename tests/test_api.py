@@ -13,8 +13,7 @@ class TestFlaskAPI(unittest.TestCase):
         self.assertEqual(response.json["status"], "healthy")
         self.assertEqual(
             response.json["message"],
-            "My CI/CD application is running"
-        )
+        "My CI/CD application is running - Day 16 deployment verified"        )
 
     def test_health_endpoint(self):
         response = self.client.get("/health")
