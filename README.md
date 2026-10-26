@@ -92,3 +92,60 @@ Run automated tests across multiple Python versions using GitHub Actions matrix 
 
 ### Result
 Successfully implemented matrix testing and verified that all three Python-version jobs passed in GitHub Actions.
+
+
+---
+
+## CI/CD Learning Roadmap — Progress Summary
+
+### Days 1–6: Git, GitHub and CI Fundamentals
+- Practised Git basics, branching and pull requests.
+- Created automated Python unit tests.
+- Configured GitHub Actions to run tests.
+- Practised failure detection and fixing failing tests.
+- Improved CI workflow permissions and reliability.
+
+### Days 7–14: CI/CD Pipeline Development
+- Continued hands-on CI/CD workflow practice.
+- Practised automated testing and GitHub-based version control.
+- Worked on deployment workflow configuration and troubleshooting.
+- Refer to individual commits and workflow runs for the exact exercises completed on each day.
+
+### Day 15: Deployment Workflow Practice
+- Configured a GitHub Actions deployment-practice workflow.
+- Added automated test and application validation steps.
+- Validated workflow YAML and corrected syntax errors.
+- Verified successful GitHub Actions runs.
+- Note: This workflow initially simulated deployment; the actual live deployment was completed on Day 16.
+
+### Day 16: Flask Application Deployment on Render
+
+**Objective:** Deploy a Flask API and verify that it works on a public URL.
+
+**Tools**
+- Python and Flask
+- Gunicorn
+- Git and GitHub
+- GitHub Actions
+- Render Web Services
+
+**Work completed**
+- Added Gunicorn to `requirements.txt`.
+- Fixed a Python syntax error and corrected the API test expectation.
+- Ran the local automated test suite successfully: 5 tests passed.
+- Connected the GitHub repository to Render.
+- Deployed the Flask application using Render's Free plan.
+- Verified the home endpoint returns HTTP 200 and a healthy status.
+- Verified `/health` returns HTTP 200 and `{"status": "ok"}`.
+
+**Live application:** https://ci-cd-learning-lab.onrender.com
+
+**GitHub repository:** https://github.com/jobin2790/ci-cd-learning-lab
+
+**Result:** The Flask application is live and both API endpoints have been verified.
+
+### Next Steps
+- Verify GitHub Actions after the README update.
+- Practise automatic deployment after a Git push.
+- Learn deployment health checks, logs and rollback concepts.
+- Continue with the remaining CI/CD roadmap topics.
