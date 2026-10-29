@@ -177,3 +177,44 @@ Successfully implemented matrix testing and verified that all three Python-versi
 - Expected message: `My CI/CD application is running - Day 17 deployment verified`
 
 **Key learning:** Automated tests must be updated when the expected application response changes. A successful local test run and a verified live response provide evidence that the application change works.
+
+### Day 18: Automated Test Coverage Reporting in CI/CD
+
+**Objective:** Integrate automated test execution and code coverage reporting into the GitHub Actions CI pipeline.
+
+**Tools Used:**
+- Python
+- Flask
+- Python `unittest`
+- Coverage.py
+- Git and GitHub
+- GitHub Actions
+- GitHub Actions Artifact Upload
+
+**Tasks Completed:**
+- Installed Coverage.py for Python code coverage measurement.
+- Updated `requirements.txt` to include the coverage dependency.
+- Configured the GitHub Actions workflow to run automated tests with coverage measurement.
+- Generated a terminal coverage report.
+- Generated an XML coverage report for CI integration.
+- Configured test and coverage reports to be uploaded as GitHub Actions artifacts.
+- Configured the workflow to run against Python 3.10, 3.11, and 3.12.
+- Fixed a YAML syntax error in the GitHub Actions workflow.
+- Verified successful GitHub Actions workflow execution.
+
+**Test Results:**
+- Automated tests passed: 5
+- Code coverage: 90%
+- GitHub Actions workflow: Successful
+
+**Coverage Reports:**
+- Text reports: `test-reports/test-report-python-<version>.txt`
+- XML reports: `test-reports/coverage-python-<version>.xml`
+
+**Key Learning:**
+Code coverage measures how much of the application code is executed during automated tests. Integrating coverage reporting into CI helps identify untested code and provides visibility into test quality.
+
+**Outcome:**
+Successfully integrated automated test coverage reporting into the CI pipeline and verified that the updated GitHub Actions workflow runs successfully.
+
+**GitHub Repository:** https://github.com/jobin2790/ci-cd-learning-lab
