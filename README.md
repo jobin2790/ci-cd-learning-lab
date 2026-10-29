@@ -1,6 +1,51 @@
 # CI/CD Learning Lab
-# Day 2 - Git Branching
-#Day 3 -CI on Pull Requests
+
+A hands-on learning project covering Git, GitHub, automated testing, continuous integration, deployment, and CI/CD automation using Python, Flask, and GitHub Actions.
+
+---
+
+## Day 1 — Git and GitHub Fundamentals
+
+### What I practiced
+- Understanding Git and version control fundamentals.
+- Practicing basic Git commands.
+- Learning how to track changes and manage repository history.
+- Understanding how local Git repositories connect to GitHub.
+
+### Tools used
+- Git
+- GitHub
+- Terminal
+
+---
+
+## Day 2 — Git Branching
+
+### What I practiced
+- Understanding Git branches and their purpose.
+- Practicing branch creation and switching.
+- Learning how branches support isolated development.
+- Understanding how changes are committed and synchronized with GitHub.
+
+### Tools used
+- Git
+- GitHub
+- Terminal
+
+---
+
+## Day 3 — Continuous Integration with Pull Requests
+
+### What I practiced
+- Understanding how pull requests support collaborative development.
+- Learning how CI workflows can run when a pull request is opened or updated.
+- Understanding automated checks before merging changes.
+- Learning how CI helps identify problems before code reaches the main branch.
+
+### Tools used
+- Git
+- GitHub
+- GitHub Actions
 ## Day 4 - Automated Testing in CI
 
 ### What I practiced
