@@ -149,3 +149,31 @@ Successfully implemented matrix testing and verified that all three Python-versi
 - Practise automatic deployment after a Git push.
 - Learn deployment health checks, logs and rollback concepts.
 - Continue with the remaining CI/CD roadmap topics.
+
+### Day 17: CI/CD Deployment Verification and Test Synchronization
+
+**Objective:** Update a Flask application, synchronize automated tests, and verify the deployed application.
+
+**Tasks completed:**
+- Updated the Flask API response to identify the Day 17 deployment.
+- Updated the API test to match the new response.
+- Executed the automated test suite.
+- Verified that all 5 tests passed.
+- Committed and pushed changes to GitHub.
+- Verified the live application response on Render.
+
+**Tools used:**
+- Python and Flask
+- Python unittest
+- Git and GitHub
+- GitHub Actions
+- Render
+
+**Verification:**
+- Automated tests: 5 passed.
+- Git commit: `Day 17: update deployment verification tests`
+- Live endpoint: `https://ci-cd-learning-lab.onrender.com/`
+- Expected status: `healthy`
+- Expected message: `My CI/CD application is running - Day 17 deployment verified`
+
+**Key learning:** Automated tests must be updated when the expected application response changes. A successful local test run and a verified live response provide evidence that the application change works.
