@@ -37,20 +37,20 @@ jobs:
 
       - name: Run tests and generate coverage report
         shell: bash
-         run: |
-         mkdir -p test-reports
-         set -o pipefail
-    python -m coverage run --source=app -m unittest discover -s tests -v 2>&1 | tee "test-reports/test-report-python-${{ matrix.python-version }}.txt"
-    python -m coverage report -m
-    python -m coverage xml -o "test-reports/coverage-python-${{ matrix.python-version }}.xml"
-      
+        run: |
+          mkdir -p test-reports
+          set -o pipefail
+          python -m coverage run --source=app -m unittest discover -s tests -v 2>&1 | tee "test-reports/test-report-python-${{ matrix.python-version }}.txt"
+          python -m coverage report -m
+          python -m coverage xml -o "test-reports/coverage-python-${{ matrix.python-version }}.xml"
+
       - name: Upload test and coverage reports
-      if: always()
-       uses: actions/upload-artifact@v5
-       with:
-       name: test-reports-python-${{ matrix.python-version }}
-       path: |
-        test-reports/test-report-python-${{ matrix.python-version }}.txt
-        test-reports/coverage-python-${{ matrix.python-version }}.xml
-      if-no-files-found: warn
-      retention-days: 7
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: test-reports-python-${{ matrix.python-version }}
+          path: |
+            test-reports/test-report-python-${{ matrix.python-version }}.txt
+            test-reports/coverage-python-${{ matrix.python-version }}.xml
+          if-no-files-found: warn
+          retention-days: 7
