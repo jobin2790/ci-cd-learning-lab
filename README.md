@@ -486,6 +486,65 @@ This project demonstrates a progressive, hands-on learning journey covering vers
 
 ---
 
+# Day 19 — Update .gitignore for CI Artifacts
+
+## Objective
+Improve repository cleanliness by excluding generated CI/CD artifacts and temporary files from Git version control.
+
+## Tasks Completed
+- Updated `.gitignore` to exclude Python cache files.
+- Added exclusions for test coverage artifacts.
+- Added exclusions for generated test reports.
+- Excluded environment variable files.
+- Removed unnecessary README backup file.
+- Verified Git repository status.
+- Committed and pushed changes to GitHub.
+- Verified successful GitHub Actions workflow execution.
+
+## .gitignore Configuration
+
+```gitignore
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Test reports
+test-reports/
+
+# Environment variables
+.env
+```
+
+## Git Commands Used
+
+```bash
+git status
+cat .gitignore
+nano .gitignore
+rm README_backup.md
+git add .gitignore .github/workflows/deploy.yml README.md
+git commit -m "Day 19: Update gitignore for CI artifacts"
+git push origin main
+```
+
+## GitHub Actions Verification
+
+- CI Pipeline #47: Successful
+- CI-CD Deployment Practice #21: Successful
+- GitHub Actions workflow execution: Passed
+
+## Outcome
+
+The repository is cleaner and no longer tracks unnecessary Python cache, coverage, test report, or environment files.
+
+The changes were committed and pushed successfully to the main branch.
+
+**Status: Day 19 Completed**
+
 ## Learning Summary
 
 ### Days 1–3: Git and Version Control
