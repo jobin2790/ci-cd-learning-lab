@@ -545,6 +545,85 @@ The changes were committed and pushed successfully to the main branch.
 
 **Status: Day 19 Completed**
 
+
+# Day 20 — Automated Render Deployment using GitHub Actions
+
+## Objective
+Automate the deployment of a Flask application to Render using GitHub Actions. The deployment process should run only after the CI pipeline completes successfully.
+
+## Tools Used
+- Git & GitHub
+- GitHub Actions
+- Python
+- Flask
+- Render
+- GitHub Repository Secrets
+- cURL
+
+## Implementation
+
+### 1. Render Deployment Hook
+Configured a Render Deploy Hook for the Flask web service.
+
+Stored the deployment hook securely in GitHub Repository Secrets:
+
+`RENDER_DEPLOY_HOOK`
+
+The sensitive URL is not exposed in the workflow source code.
+
+### 2. GitHub Actions Workflow
+Updated the GitHub Actions deployment workflow to trigger Render deployment after successful verification.
+
+```yaml
+- name: Deploy to Render
+  if: success()
+  run: |
+    curl -X POST "$RENDER_DEPLOY_HOOK"
+  env:
+    RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+```
+
+### 3. Deployment Process
+
+1. Developer pushes code to the GitHub repository.
+2. GitHub Actions checks out the source code.
+3. Application files are verified.
+4. Dependencies are installed.
+5. Application syntax is checked.
+6. CI pipeline completes successfully.
+7. GitHub Actions triggers the Render Deploy Hook.
+8. Render builds and deploys the Flask application.
+9. The deployed application becomes available through its public URL.
+
+## Verification
+
+- GitHub Actions workflow executed successfully.
+- Render deployment was triggered.
+- Render service status displayed as Live.
+- Day 20 deployment appeared in Render deployment history.
+- Deployment commit: `c832fad`
+
+## Live Application
+
+https://ci-cd-learning-lab.onrender.com
+
+## Key Learnings
+
+- Automated deployment using GitHub Actions.
+- Using Render Deploy Hooks.
+- Managing sensitive deployment credentials with GitHub Secrets.
+- Connecting CI pipeline execution with cloud deployment.
+- Understanding CI/CD automation from code push to deployment.
+- Verifying deployment through Render deployment history.
+
+## Outcome
+
+Successfully implemented automated deployment of a Flask application to Render using GitHub Actions.
+
+This lab demonstrates a basic CI/CD workflow integrating automated verification and cloud deployment.
+
+**Status: Completed**
+
 ## Learning Summary
 
 ### Days 1–3: Git and Version Control
