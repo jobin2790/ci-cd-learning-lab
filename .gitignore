@@ -1,2 +1,15 @@
 __pycache__/
 *.py[cod]
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Test reports
+test-reports/
+
+# Environment variables
+.env
