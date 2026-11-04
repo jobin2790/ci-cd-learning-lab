@@ -647,6 +647,62 @@ Build and deploy a Flask application using Docker.
 ### GitHub Documentation
 - [Day 21 Docker Deployment](cicd-day21/README.md)
 
+## Day 22 — Docker Compose Application
+
+### Objective
+Deploy a Flask application integrated with Redis using Docker Compose.
+
+### Technologies Used
+- Python 3.12
+- Flask
+- Redis
+- Docker
+- Docker Compose
+- Gunicorn
+
+### Architecture
+Flask Web Application → Redis Database
+
+### Application Features
+- Flask REST API
+- Redis visit counter
+- Health check endpoint
+- Docker containerization
+- Multi-container deployment using Docker Compose
+
+### Deployment
+Build and start the application:
+
+    docker compose up --build -d
+
+Check running containers:
+
+    docker compose ps
+
+### Application Testing
+
+Main endpoint:
+
+    curl http://localhost:5003
+
+Health endpoint:
+
+    curl http://localhost:5003/health
+
+Expected response:
+
+    {"status":"ok"}
+
+### Learning Outcomes
+- Learned Docker Compose fundamentals.
+- Integrated Flask with Redis.
+- Configured multi-container networking.
+- Built and deployed a Dockerized application.
+- Verified application functionality using curl.
+
+### Status
+Day 22 — Completed Successfully.
+
 ## Learning Summary
 
 ### Days 1–3: Git and Version Control
