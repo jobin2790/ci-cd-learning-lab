@@ -624,6 +624,29 @@ This lab demonstrates a basic CI/CD workflow integrating automated verification 
 
 **Status: Completed**
 
+## Day 21 – Docker Deployment
+
+### Objective
+Build and deploy a Flask application using Docker.
+
+### Tasks Completed
+- Created a Dockerfile using Python 3.12 Slim.
+- Installed Flask and Gunicorn.
+- Built a Docker image.
+- Deployed the Flask application inside a Docker container.
+- Configured port mapping (5002:5000).
+- Resolved Docker port allocation conflict.
+- Verified application using curl.
+- Tested the health endpoint.
+
+### Verification
+- Application URL: http://localhost:5002
+- Health Check: http://localhost:5002/health
+- Status: Completed Successfully
+
+### GitHub Documentation
+- [Day 21 Docker Deployment](cicd-day21/README.md)
+
 ## Learning Summary
 
 ### Days 1–3: Git and Version Control
