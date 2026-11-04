@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    container_name: cicd-day22-web
+    ports:
+      - "5003:5000"
+    environment:
+      REDIS_HOST: redis
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    container_name: cicd-day22-redis
