@@ -703,6 +703,56 @@ Expected response:
 ### Status
 Day 22 — Completed Successfully.
 
+## Day 23: Docker Compose CI Integration
+
+### Objective
+Automate Docker Compose integration testing using GitHub Actions.
+
+### What I Learned
+- Docker Compose configuration validation
+- Building multi-container applications in CI
+- Running Flask and Redis containers
+- Application health checks
+- Redis connectivity verification
+- Automated integration testing
+- GitHub Actions workflow automation
+- Container cleanup after testing
+
+### Tools Used
+- Docker
+- Docker Compose
+- Python Flask
+- Redis
+- GitHub Actions
+- Git and GitHub
+
+### Implementation
+Created a GitHub Actions workflow:
+
+`.github/workflows/docker-compose-ci.yml`
+
+The workflow:
+1. Checks out the repository.
+2. Validates Docker Compose configuration.
+3. Builds Docker Compose services.
+4. Starts Flask and Redis containers.
+5. Waits for Flask health verification.
+6. Tests the Flask application.
+7. Verifies Redis connectivity.
+8. Displays container logs on failure.
+9. Stops and removes containers.
+
+### Result
+Successfully implemented Docker Compose CI integration.
+
+GitHub Actions workflow execution completed successfully.
+
+### Repository
+[CI/CD Learning Lab](https://github.com/jobin2790/ci-cd-learning-lab)
+
+### Documentation
+[cicd-day23/README.md](cicd-day23/README.md)
+
 ## Learning Summary
 
 ### Days 1–3: Git and Version Control
